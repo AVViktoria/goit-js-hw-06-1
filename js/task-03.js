@@ -32,6 +32,14 @@ Array.prototype.forEach.call(images, function(element) {
 );
  galleryEl.appendChild(createListElements);
 
+
   });
 
- 
+  galleryEl.style.cssText += 
+  `display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;`
+  
