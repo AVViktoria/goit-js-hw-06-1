@@ -28,7 +28,7 @@ Array.prototype.forEach.call(images, function(element) {
 
   createListElements.insertAdjacentHTML(
   "beforeEnd",
- ` <img src="${element.url}" alt="${element.alt}" class ='img-el'  width = '150px' height = '150px'></img>`
+ ` <img src="${element.url}" alt="${element.alt}" class ='img-el'  width = '225px' height = '150px'></img>`
 );
  galleryEl.appendChild(createListElements);
 
@@ -40,6 +40,5 @@ Array.prototype.forEach.call(images, function(element) {
   justify-content: space-evenly;
   list-style-type: none;
   max-width: 100%;
-  max-height: 100%;
-  margin: 0;`
+  margin: 0;`;
   
