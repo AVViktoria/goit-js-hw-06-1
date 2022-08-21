@@ -15,13 +15,16 @@ const ingredients = [
 ];
 
 const addElementsToListHtml = document.querySelector('#ingredients');
-Array.prototype.forEach.call(ingredients, function(element) {
-  const createList = document.createElement('li');
-  
-  createList.textContent = element;
-  createList.classList.add ('item');
-  addElementsToListHtml.append(createList);
-  });
 
+const elements = ingredients.map(ingredient => {
+ const createList = document.createElement('li');
+createList.textContent = ingredient;
+ createList.classList.add ('item');
+return createList;
+});
+
+
+addElementsToListHtml.append(...elements);
+console.log(addElementsToListHtml);
 
 // createList.insertAdjacentHTML("afterbegin", addElementsToListHtml);

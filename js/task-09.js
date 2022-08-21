@@ -12,13 +12,15 @@ const refs = {
   
   function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-  }
-  
-  function switchBcgColor(){
-    document.body.style.background = getRandomHexColor();
-    refs.nameColor.textContent = getRandomHexColor();
-    refs.nameColor.textContent = getRandomHexColor();
   };
   
-   refs.btnChangeColor.addEventListener('click', switchBcgColor); 
+    refs.btnChangeColor.addEventListener('click', () => {
+      document.body.style.background = getRandomHexColor();
+      refs.nameColor.textContent = getRandomHexColor();
+      document.body.setAttribute(
+        'style',
+        'background-color: ' + refs.nameColor.textContent
+      );
+    });
+
   

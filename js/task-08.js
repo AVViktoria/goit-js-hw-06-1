@@ -25,19 +25,7 @@ if(emailValue ==='' || passwordValue==='' ){
   alert("Все поля ввода должны быть заполнены. Исправьте, пожалуйста.")
 }
 
-const formData = new FormData(event.currentTarget);
-console.log(formData);
-
-formData.forEach((value, name) => {
-  console.log("name", name);
-  console.log("value", value);
-});
-//or
-// const totalValue ={
-//   email: emailValue, password: passwordValue
-// }
-
+console.log({email: emailValue, password: passwordValue});
 }
 
 refs.inputLoginForm.addEventListener('submit', onFormSubmit);
-

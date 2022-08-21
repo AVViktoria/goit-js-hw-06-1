@@ -22,18 +22,14 @@ const images = [
 
 
 const galleryEl = document.querySelector('.gallery');
-Array.prototype.forEach.call(images, function(element) {
-  const createListElements = document.createElement('li');
-  createListElements.classList.add('list');
+const listGallery = element => {
+  return ` <li><img src="${element.url}" alt="${element.alt}" class ='img-el'  width = '225px' height = '150px'></img></li>`;
+};
 
-  createListElements.insertAdjacentHTML(
-  "beforeEnd",
- ` <img src="${element.url}" alt="${element.alt}" class ='img-el'  width = '225px' height = '150px'></img>`
-);
- galleryEl.appendChild(createListElements);
+  const createListElements = images.map(listGallery).join('');
+  console.log(createListElements);
+ galleryEl.insertAdjacentHTML('beforeend', createListElements);
 
-
-  });
 
   galleryEl.style.cssText += 
   `display: flex;

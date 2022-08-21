@@ -1,13 +1,12 @@
 const countListCategories = document.querySelectorAll('.item');
 console.log(`Number of categories: ${countListCategories.length}`);
 
-Array.prototype.forEach.call(countListCategories, (element) => {
-    const title = element.querySelector('h2').innerHTML;
-    const itemsLength = element.querySelectorAll('li').length;
+countListCategories.forEach(function(element){
+
+    const title = element.firstChild.textContent;
+    const itemsLength = element.lastChild.children.length;
     console.log(`Category: ${title} \nElements: ${itemsLength}`);
-});
-
-
+})
 
 // Number of categories: 3
 

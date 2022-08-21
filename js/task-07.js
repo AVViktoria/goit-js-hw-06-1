@@ -9,7 +9,7 @@ const refs = {
   inputSizeControl: document.querySelector('#font-size-control'),
   inputTxtValue:  document.querySelector('#text'),
 };
-
+refs.inputTxtValue.style.fontSize = '56px';
 const onChangeTextSize = () => {
   refs.inputTxtValue.style.fontSize = `${refs.inputSizeControl.value}px`;
 };
